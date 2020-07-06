@@ -1,0 +1,53 @@
+2. Describe what happens if, in HelloWorld.java, you omit
+a. main
+  A:  error: <identifier> expected
+       public static void (String[] args) {
+                         ^
+      There is no method name thus we get compile time error
+
+b. String
+  A: error: ',', ')', or '[' expected
+       public static void main([] args) {
+                                 ^
+     2 errors
+     Compilation-error, there is no type for the String array paramter
+
+c. HelloWorld
+  A: Compilation-error, following class keyword my contain name for that class
+
+d. System.out
+  A: Compilation-error. We refer to println() method that in System.out
+
+e. println
+  A: Compilation-error. We refer to the class System.out but no method written afterwards
+
+****************************************************************************************************
+
+3. Describe what happens if, in HelloWorld.java, you omit
+   the ;        -> A: CE - each statement should be terminated with semi-colon ";"
+   the first "  -> A: CE - unclosed string literal
+   the second " -> A: same as above
+   the first {  -> A: CE - no starting scope for a class definition
+   the second { -> A: CE - no starting scope for a method main() definition
+   the first }  -> A: CE - we are not closing method main()
+   the second } -> A: CE - we are not closing class definition
+
+****************************************************************************************************
+
+4. see week_1/web/exercises 1.1.3
+
+****************************************************************************************************
+
+5. I typed in the following program.
+   It compiles fine, but when I execute it, I get the error
+   java.lang.NoSuchMethodError: main.
+   What am I doing wrong?
+
+   public class Hello {
+      public static void main() {
+         System.out.println("Doesn't execute");
+      }
+   }
+
+A: main() doesn't accept any parameter. main() method must have a String array to store command
+line arguments (if passed)

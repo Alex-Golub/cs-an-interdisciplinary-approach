@@ -1,0 +1,71 @@
+1.1.2 Describe what happens if you omit the following in HelloWorld.java:
+a. public
+  Nothing happens, this class will not be publicly accessible by others
+
+b. static
+  Error: Main method is not static in class Hello, please define the main method as:
+     public static void main(String[] args)
+
+c. void
+  error: invalid method declaration; return type required
+    public static main(String[] args) {
+                  ^
+d. args
+  Error: Main method not found in class Hello, please define the main method as:
+     public static void main(String[] args)
+
+****************************************************************************************************
+
+1.1.3 Describe what happens if you misspell (by, say, omitting the second letter)
+the following in HelloWorld.java:
+a. public - public is a key word thus we will get compilation-error
+b. static - same as (a) static is also keyword in java syntax
+c. void - same as (a)
+d. args - nothing happens, args is a name we give, so "ags" is valid name for array of arguments
+
+****************************************************************************************************
+
+1.1.4 Describe what happens if you put the double quotes in the print statement of HelloWorld.java
+on different lines, as in this code fragment:
+System.out.println("Hello,
+World");
+
+A: error: unclosed string literal
+   System.out.println("Hello,
+                      ^
+   Hello.java:15: error: unclosed string literal
+   World");
+        ^
+   Hello.java:15: error: not a statement
+   World");
+   ^
+   3 errors
+
+****************************************************************************************************
+
+1.1.5 Describe what happens if you try to execute UseArgument with each of the following command lines:
+a. java UseArgument java
+b. java UseArgument @!&^%
+c. java UseArgument 1234
+d. java UseArgument.java Bob
+e. java UseArgument Alice Bob
+
+A: Everything after the name of the class name UseArgument is considered as a string argument which
+   goes to the args parameter of main()
+   (a): java is the first argument in args i.e. args[0] -> "java"
+   (b): args[0] -> "@!&^%"
+   (c): args[0] -> "1234"
+   (d): We use .java when we javac but when invoking java with .java extension it will still run
+        so args[0] -> "Bob"
+   (e): Here we have two String arguments separated by a space so we get:
+        args[0] -> "Alice"
+        args[1] -> "Bob"
+
+****************************************************************************************************
+
+
+
+
+
+
+
