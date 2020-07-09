@@ -61,11 +61,159 @@ A: Everything after the name of the class name UseArgument is considered as a st
         args[0] -> "Alice"
         args[1] -> "Bob"
 
+
+****************************************************************************************************
+  1.2 Built-in Types of Data
 ****************************************************************************************************
 
+1.2.1 Suppose that a and b are int variables.
+What does the following sequence of statements do?
+int t = a; b = t; a = b;
 
+A: This sequence assign a and b to the same value
+e.g. a = 2, b = 5;
+int t = a; // t = 2
+b = t;     // b = 2
+a = b;     // a = 2
 
+****************************************************************************************************
 
+1.2.3 Suppose that a and b are boolean variables. Show that the expression
+(!(a && b) && (a || b)) || ((a && b) || !(a || b))
+evaluates to true.
 
+A:  a  b  !(a && b)  (a || b)  (a && b)  !(a || b)  (!(a && b) && (a || b)) || ((a && b) || !(a || b))
+    F  F     T          F         F         T               T
+    F  T     T          T         F         F               T (short circuit in || if first term true all is true)
+    T  F     T          T         F         F               T
+    T  T     F          T         T         F               T
 
+****************************************************************************************************
 
+1.2.4 Suppose that a and b are int variables.
+Simplify the following expression:
+(!(a < b) && !(a > b)).
+
+A: a >= b || a <= b
+
+****************************************************************************************************
+
+1.2.5 The exclusive or operator ^ for boolean operands is defined to be true if
+they are different, false if they are the same.
+Give a truth table for this function.
+
+A: a    b    a ^ b
+   F    F      F
+   F    T      T
+   T    F      T
+   T    T      F
+
+****************************************************************************************************
+
+1.2.6 Why does 10/3 give 3 and not 3.333333333?
+A: 10 and 3 are integer values.
+   Division operator between two integer values will give only the quotient truncating decimal part.
+   If we interested in a floating point result, one of the literals must be floating-point value
+   i.e. 10.0/3 == 3.333333.. or 10/3.0 == 3.3333333 or 10.0/3.0 == 3.33333
+   If one of the values is double java will perforce type-conversion to the "bigger-type".
+
+****************************************************************************************************
+
+1.2.7 What does each of the following print?
+a. System.out.println(2 + "bc");      // 2bc => "bc" is a string so left literal will be evaluated as String
+b. System.out.println(2 + 3 + "bc");  // 5bc => 2 and 3 are integer values so first + is preformed and the string concatenation
+c. System.out.println((2+3) + "bc");  // 5bc => same as above, this time parentheses have higher precedence
+d. System.out.println("bc" + (2+3));  // bc5 => parentheses have higher precedence over +
+e. System.out.println("bc" + 2 + 3);  // bc23 => evaluation left-to-right
+Explain each outcome.
+
+****************************************************************************************************
+
+1.2.8 Explain how to use program 1.2.3 to find the square root of a number.
+
+A: first we must compile the .java file using the command javac Quadratic.java
+   If compilation passes we get .class file (Bytecode)
+   Next we run the program using java Quadratic followed by two arguments that we pass
+   to our program e.g. java Quadratic -5.0 20.0
+
+****************************************************************************************************
+
+1.2.9 What does each of the following print?
+a. System.out.println('b');               // b => println() can receive char as argument
+b. System.out.println('b' + 'c');         // 197 => value of 'b' in ascii is 98 and 'c' is 99 adding them 197
+c. System.out.println((char) ('a' + 4));  // 'a' + 4 == 97 + 4 == (char) 101 => e
+Explain each outcome
+
+****************************************************************************************************
+
+1.2.10 Suppose that a variable a is declared as int a = 2147483647 (or equivalently, Integer.MAX_VALUE).
+What does each of the following print?
+a. System.out.println(a);    // => 2147483647
+b. System.out.println(a+1);  // overflow will result in wrap-around result is => -2147483648
+c. System.out.println(2-a);  // 2 - 2147483647 => -2147483645
+d. System.out.println(-2-a); // overflow wrap to positive -2 - 2147483647 => 2147483647
+e. System.out.println(2*a);  // => 2147483647 + 2147483647 => -2147483648 + 2147483646 => -2
+f. System.out.println(4*a);  // => 2 * a * 2 => -2 * 2 => -4
+Explain each outcome.
+
+****************************************************************************************************
+
+1.2.11 Suppose that a variable a is declared as double a = 3.14159.
+What does each of the following print?
+a. System.out.println(a);           // => 3.14159
+b. System.out.println(a+1);         // 3.14159 + 1.0000... => 4.14159
+c. System.out.println(8/(int) a);   // cast first and then divide => 8/3 => 2
+d. System.out.println(8/a);         // a is double thus 8 is converted to double as well => 2.5464812403910124
+e. System.out.println((int) (8/a)); // parentheses first and then case => (int) 2.... => 2
+Explain each outcome.
+
+****************************************************************************************************
+
+1.2.12 Describe what happens if you write sqrt instead of Math.sqrt in program 1.2.3.
+A: Math.sqrt(Math.sqrt(x)) is the same as Math.pow(x, 1/4)
+   If we write it multiple times the value is getting close to 0.0 but will never reach 0.0
+
+****************************************************************************************************
+
+1.2.13 Evaluate the expression (Math.sqrt(2) * Math.sqrt(2) == 2).
+A: The expresion will always be false.
+   Math.sqrt(x) returns double, multiplication between doubles the result is of double type.
+   On the right side we have integer value.
+   Comparing between double and integer is not possible in Java so integer will be implicitly
+   converted to double type.
+   Math.sqrt(2) * Math.sqrt(2) is ~2.0000000000000004
+   2 converted to double is ~2.00000000...
+   2 representation is not fixed so comparing double values will result in false value
+
+****************************************************************************************************
+
+1.2.16 A physics student gets unexpected results when using the code
+double force = G * mass1 * mass2 / r * r;
+to compute values according to the formula F = Gm1m2 / r^2.
+Explain the problem and correct the code.
+
+A: In java multiplication and division operator has the same precedence so,
+   the calculation G * mass1 * mass2 / r * r is evaluated left-to-right
+   i.e. ((((G * mass1) * mass2) / r) * r) resulting in unexpected result
+   The correct answer will be achieved using parentheses
+
+   double force = G * mass1 * mass2 / (r * r);
+
+****************************************************************************************************
+
+1.2.17 Give the value of the variable a after the execution of each of the following
+sequences of statements:
+  int a = 1;
+  a = a + a; // => 2
+  a = a + a; // => 4
+  a = a + a; // => 8
+
+  boolean a = true
+  a = !a; // false
+  a = !a; // true
+  a = !a; // false
+
+  int a = 2; // 2
+  a = a * a; // 4
+  a = a * a; // 16
+  a = a * a; // 256
