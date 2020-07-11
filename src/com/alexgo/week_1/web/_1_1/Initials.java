@@ -1,4 +1,4 @@
-package com.alexgo.week_1.web._1;
+package com.alexgo.week_1.web._1_1;
 
 /**
  * Write a program Initials.java that prints your initials
