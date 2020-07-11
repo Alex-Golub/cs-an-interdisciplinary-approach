@@ -26,8 +26,8 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
 - Week 1  
     - [x] 1.1 Your First Program   
     - [x] 1.2 Built-in Types of Data  
-    - [ ] Web Exercises
-    - [ ] Weekly Assignment
+    - [x] Web Exercises
+    - [x] Weekly Assignment - hello.zip
 - Week 2  
     - [ ] 1.3 Conditionals and Loops 
     - [ ] 1.4 Arrays
