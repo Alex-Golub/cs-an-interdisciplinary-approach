@@ -1,0 +1,94 @@
+1.3.3 What (if anything) is wrong with each of the following statements?
+  a. if (a > b) then c = 0;       // there is no such keyword "then" we get compilation-error
+  b. if a > b { c = 0; }          // no parentheses around the boolean expresion a > b thus, compilation-error
+  c. if (a > b) c = 0;            // Ok
+  d. if (a > b) c = 0 else b = 0; // no semi-colon after c assignment thus, compilation-error
+
+****************************************************************************************************
+
+1.3.7 Suppose that i and j are both of type int.
+What is the value of j after each of the following statements is executed?
+  a. for (i = 0, j = 0; i < 10; i++) j += i;
+  i = 0, 1, 2, 3, 4, 5,  6,  7,  8,  9,  10
+  j = 0, 0, 1, 3, 6, 10, 15, 21, 28, 36, 45   =>  j = 45
+
+  b. for (i = 0, j = 1; i < 10; i++) j += j;
+  i = 0, 1, 2, 3, 4,  5,  6,  7,   8,   9,   10
+  j = 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024   =>  j = 1024
+
+  c. for (j = 0; j < 10; j++) j += j;
+  j = 0, 0, 1, 2, 3, 6, 7, 14, 15   =>    j = 15
+
+  d. for (i = 0, j = 0; i < 10; i++) j += j++; // j = j + j++
+  j = 0
+
+****************************************************************************************************
+
+1.3.11 Describe what happens when you try to print a ruler function (see the table
+on page 57) with a value of n that is too large, such as 100.
+
+  String ruler = "1";
+  for (int i = 2; i <= n; i++) // n = 100
+    ruler = ruler + i + ruler; // 111 (=2^2 - 1)  i = 2
+                               // 1112111 (=2^3 - 1) i = 3
+                               // 111211131112111 (=2^4 - 1) i = 4
+                               // 1112111311121114111211131112111 (=2^5 - 1) i = 5
+                               // ... 2^n - 1, n = 100 => 2^100 - 1
+  System.out.println(ruler);
+
+A: java.lang.OutOfMemoryError: Java heap space
+2^100 - 1 integer should be printed out which is more then practicals in the known universe
+
+****************************************************************************************************
+
+1.3.13 What are the values of m and n after executing the following code?
+int n = 123_456_789;
+int m = 0;
+while (n != 0) {
+    m = (10 * m) + (n % 10); // m = 9,        98,      987,    9876,  98765, 987654, 9876543, 98765432, 987654321
+    n = n / 10;              // n = 12345678, 1234567, 123456, 12345, 1234,  123,    12,      1,        0
+}
+
+A: This block of code reverses number n
+
+****************************************************************************************************
+
+1.3.14 What does the following code fragment print?
+int f = 0, g = 1;
+for (int i = 0; i <= 15; i++) { // i = 0, 1, 2, 3, 4, 5, 6, 7 ...
+  System.out.println(f);        // 0 1 1 2 3 5 8 13 ...
+  f = f + g;                    // f = 0, 1, 1, 2, 3, 5, 8, 13 ...
+  g = f - g;                    // g = 1, 0, 1, 1, 2, 3, 5, 8 ...
+}
+
+A: This program is printed Fibonacci sequence up to the 16-th (15 - 0 + 1 = 16) term.
+   0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 134, 233, 377, 610.
+   Fibonacci sequence defined by this formula:
+   f_0 = 0, f_1 = 1, f(n) = f(n-1) + f(n - 2) where n > 1
+
+****************************************************************************************************
+
+1.3.15 How many lines of output does the following code fragment produce?
+  for (int i = 0; i < 999; i++);   // empty loop body so this loop executes 999 times
+  { System.out.println("Hello"); } // after for loop is finished this line will be printed one time
+
+****************************************************************************************************
+
+1.3.18 Unlike the harmonic numbers, the sum 1/12 + 1/22 + ... + 1/n2 does converge to a constant as
+n grows to infinity. (Indeed, the constant is pi^2/6, so this
+formula can be used to estimate the value of pi.
+Which of the following for loops computes this sum?
+Assume that n is an int variable initialized to 1000000 and sum is a double variable initialized to 0.0.
+  a. for (int i = 1; i <= n; i++) sum += 1 / (i*i);     // sum = (((0.0 + 1/1*1) + 1/2*2) + 1/3*3) + ...  = 1.0
+                                                        // because division is integer division which truncate
+                                                        // fractional part
+  b. for (int i = 1; i <= n; i++) sum += 1.0 / i*i;     // ((0.0 + 1.0/1*1) + 1.0/2*2 + 1.0/3*3
+                                                        // 1.0 + 1.0 + 3.33
+                                                        // because of operator precedence we will get unexpected
+                                                        // result because first 1.0/i is executed and then result
+                                                        // is multiplied by i
+                                                        // result will be n, 1.0/i when i => n will give number
+                                                        // that getting closer to zero, multiple by n number will
+                                                        // be closer to n
+  c. for (int i = 1; i <= n; i++) sum += 1.0 / (i*i);   // Overflow if n > 65,535
+  d. for (int i = 1; i <= n; i++) sum += 1 / (1.0*i*i); // OK! This is harmonic number formula
