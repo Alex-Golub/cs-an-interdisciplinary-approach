@@ -6,7 +6,7 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/CS-Programming with a Purpose-green.svg" />
-<img src="https://img.shields.io/badge/Week-1-green.svg" />
+<img src="https://img.shields.io/badge/Week-2-green.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -30,10 +30,12 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     - [x] Weekly Assignment - hello.zip
 - Week 2  
     - [ ] 1.3 Conditionals and Loops 
-    - [ ] 1.4 Arrays
+    - [ ] Web Exercises
+    - [ ] Weekly Assignment
 - Week 3
-    - [ ] 1.5 Input and Output 
+    - [ ] 1.4 Arrays 
 - Week 4
+    - [ ] 1.5 Input and Output
     - [ ] 1.6 Case Study: Random Web Surfer  
 - [ ] Week 5  
 - [ ] Week 6  
@@ -44,3 +46,6 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
 - [ ] Week 11  
 - [ ] Week 12  
     
+### ToDo's
+    - (b) 1.3.19, 25-26, 28, 39, 41, 42-46
+           
