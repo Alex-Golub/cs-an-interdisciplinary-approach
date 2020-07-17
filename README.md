@@ -5,8 +5,9 @@
   </a>
 </p>
 <p align="center">
-<img src="https://img.shields.io/badge/CS-Programming with a Purpose-green.svg" />
-<img src="https://img.shields.io/badge/Week-2-green.svg" />
+<img src="https://img.shields.io/badge/CS1-Programming with a Purpose-green.svg" />
+<img src="https://img.shields.io/badge/Week-3-yellow.svg" />
+<img src="https://img.shields.io/badge/Lecture-Arrays-orange.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -27,11 +28,11 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     - [x] 1.1 Your First Program   
     - [x] 1.2 Built-in Types of Data  
     - [x] Web Exercises
-    - [x] Weekly Assignment - hello.zip
+    - [x] Weekly Assignment - hello.zip 100/100
 - Week 2  
     - [ ] 1.3 Conditionals and Loops 
     - [ ] Web Exercises
-    - [ ] Weekly Assignment
+    - [x] Weekly Assignment - loops.zip 100/100
 - Week 3
     - [ ] 1.4 Arrays 
 - Week 4
