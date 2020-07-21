@@ -35,6 +35,8 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     - [x] Weekly Assignment - loops.zip 100/100
 - Week 3
     - [ ] 1.4 Arrays 
+    - [ ] Web Exercises
+    - [ ] Weekly Assignment
 - Week 4
     - [ ] 1.5 Input and Output
     - [ ] 1.6 Case Study: Random Web Surfer  
@@ -48,5 +50,7 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
 - [ ] Week 12  
     
 ### ToDo's
-    - (b) 1.3.19, 25-26, 28, 39, 41, 42-46
+    1.3 Conditionals and Loops
+    - (book) 1.3.19, 25-26, 28, 39, 41, 42-46
+    - (web) 2, 3, 4, 15, 21, 24, 25, 29-84
            

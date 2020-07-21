@@ -1,0 +1,197 @@
+5. How can I create in an infinite loop with a for loop?
+
+A: for (;;) is the same as while (true) without break statement within the for
+   we get infinite  loop.
+
+****************************************************************************************************
+
+6. What's wrong with the following loop?
+    boolean done = false;
+    while (done = false) { ... }
+
+A: There is an assignment in the evaluation expresion of the while loop.
+This assignment will be evaluated to the value of variable done which is boolean so, this loop
+will no be executed.
+
+****************************************************************************************************
+
+7. What's wrong with the following loop that is intended to compute the sum of the integers 1 through 100?
+   for (int i = 1; i <= N; i++) {
+      int sum = 0;
+      sum = sum + i;
+   }
+   System.out.println(sum);  // compilation-error, sum out of scope
+
+A: With each iteration of the loop new sum variable is created and initialized to zero.
+   so there is no actual summation.
+   Furthermore, when we try to print sum to console we will get in this line compilation-error
+   because sum not defined out of the for loop.
+
+   correct version:
+   int sum = 0;
+   for (int i = 1; i <= N; i++) { sum += i; }
+   System.out.println(sum);
+
+****************************************************************************************************
+
+9. What is wrong with the following code fragment?
+   double x = -32.2;
+   boolean isPositive = (x > 0);  // false
+   if (isPositive = true) System.out.println(x + " is positive");  // -32.2 us positive
+   else                   System.out.println(x + " is not positive");
+
+A: Assignment within if evaluation statement. isPositive in deceleration line is false because x is less
+   then zero. isPositive = true is assignment statement so isPositive is true and if evaluates to true
+   which prints "-32.2 is positive" which is not true.
+
+   correct version is: if (isPositive) {...} else {...}
+
+****************************************************************************************************
+
+10. Change/add one character so that the following program prints 20 xs.
+    There are two different solutions.
+    int i = 0, n = 20;
+    for (i = 0; i < n; i--)
+        System.out.print("x");
+
+A: 1. -i < n // i = 0, -(-1) = 1, -(-2) = 2, ... -(-19) = 19, -(-20) = 20
+   2. replace i-- with n--
+   3. replace i-- with i++
+
+****************************************************************************************************
+
+11. What does the following code fragment do?
+    if (x > 0); // there is ; so this if is redundant
+        System.out.println("positive"); // this line will be printed regardless of x
+
+****************************************************************************************************
+
+14. What does the following program do?
+    public static void main(String[] args) {
+       int N = Integer.parseInt(args[0]);
+       int x = 1;
+       while (N >= 1) {
+          System.out.println(x);
+          x = 2 * x;
+          N = N / 2;
+       }
+    }
+
+A: N:   15 7 3 1 0       8 4 2 1 0
+   x:   1  2 4 8 16      1 2 4 8 16
+   out: 1  2 4 8         1 2 4 8
+   This program prints powers of two less then or equal to N
+
+****************************************************************************************************
+
+16. Given two positive integers a and b, what result does the following code fragment leave in c
+    c = 0;
+    while (b > 0) {
+       if (b % 2 == 1) c = c + a;
+       b = b / 2;
+       a = a + a;
+    }
+
+A: a: 9 18 36 72
+   b: 5 2  1  0
+   c: 0 9  45       => c hold the result of a * b
+
+****************************************************************************************************
+
+18. What does the following program print?
+    public class Test {
+       public static void main(String[] args) {
+          if (10 > 5);
+          else; {
+              System.out.println("Here");
+          }; // => redundant semi-colon
+       }
+    }
+
+A: program prints "Here"
+
+****************************************************************************************************
+
+27. What do the following two code fragments do?
+    for (int i = 0; i < N; i++)
+       for (int j = 0; j < N; j++)
+           if (i != j) System.out.println(i + ", " + j);
+
+    i j N output
+    0 0 3
+    0 1   0, 1
+      2   0, 2
+      3
+    1 0   1, 0
+      1
+      2   1, 2
+      3
+    2 0   2, 0
+      1   2, 1
+      2
+      3
+
+    A: This program prints pairs with sum N, N+1, N+2 ...
+
+    for (int i = 0; i < N; i++)
+       for (int j = 0; (i != j) && (j < N); j++)
+           System.out.println(i + ", " + j);
+
+    i  j  N  output
+    0  0  4
+       1     0, 1
+       2     0, 2
+       3     0, 3
+       4
+    1  0     1, 1
+       1
+       2     1, 2
+       3     1, 3
+       4
+    2  0     2, 0
+       1     2, 1
+       2
+       3     2, 3
+       4
+    3  0     3, 0
+       1     3, 1
+       2     3, 2
+       3
+       4
+
+    1, 1, 1
+    1, 1, 1
+    1, 2, 8
+    1, 3, 9
+    A: Programs prints powers of i up to N - 1
+
+****************************************************************************************************
+
+28. Determine what value gets printed out without using a computer.
+    Choose the correct answer from 0, 100, 101, 517, or 1000.
+
+    int cnt = 0;
+    for (int i = 0; i < 10; i++)
+       for (int j = 0; j < 10; j++)
+          for (int k = 0; k < 10; k++)
+             if (2*i + j >= 3*k)
+                cnt++;
+    System.out.println(cnt);
+
+    i  j  k  cnt  out
+    0  0  0  1
+          1
+       1  0  2
+          1
+       2  0  3
+          1
+       3  0  4
+          1  5
+          2
+       4  0  6
+          1  7
+          2
+
+    A: 517
+
+****************************************************************************************************
