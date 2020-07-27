@@ -5,9 +5,9 @@
   </a>
 </p>
 <p align="center">
-<img src="https://img.shields.io/badge/CS1-Programming with a Purpose-green.svg" />
-<img src="https://img.shields.io/badge/Week-3-yellow.svg" />
-<img src="https://img.shields.io/badge/Lecture-Arrays-orange.svg" />
+<img src="https://img.shields.io/badge/CS1-Programming with a Purpose-purple.svg" />
+<img src="https://img.shields.io/badge/Week-4-purple.svg" />
+<img src="https://img.shields.io/badge/Lecture-Input and Output-purple.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -24,33 +24,49 @@ NOTE: (Exercises.txt file contain verbal answers to none-code questions)
 Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](https://introcs.cs.princeton.edu/java/home/)  
 
 ## Progress
-- Week 1  
+- **Week 1**  
     - [x] 1.1 Your First Program   
     - [x] 1.2 Built-in Types of Data  
-    - [x] Web Exercises
+        - [x] Exercises
+        - [x] Creative Exercises
+        - [x] Web Exercises
     - [x] Weekly Assignment - hello.zip 100/100
-- Week 2  
+- **Week 2**  
     - [ ] 1.3 Conditionals and Loops 
-    - [ ] Web Exercises
+        - [ ] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
     - [x] Weekly Assignment - loops.zip 100/100
-- Week 3
+- **Week 3**
     - [ ] 1.4 Arrays 
-    - [ ] Web Exercises
-    - [ ] Weekly Assignment
-- Week 4
+        - [ ] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
+    - [x] Weekly Assignment - arrays.zip 100/100
+- **Week 4**
     - [ ] 1.5 Input and Output
+        - [ ] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
     - [ ] 1.6 Case Study: Random Web Surfer  
-- [ ] Week 5  
-- [ ] Week 6  
-- [ ] Week 7  
-- [ ] Week 8  
-- [ ] Week 9  
-- [ ] Week 10  
-- [ ] Week 11  
-- [ ] Week 12  
+- **Week 5** 
+    - [ ] 2.1 - 2 Defining Functions, Libraries and Clients
+- **Week 6**  
+    - [ ] 2.3 Recursion
+- **Week 7**  
+    - [ ] 4.1 Performance (Analysis of Algorithms)
+- **Week 8**  
+    - [ ] 3.1 Using Data Types (ADT)
+- **Week 9**  
+    - [ ] 3.2 Creating Data Types
+- **Week 10** 
+    - [ ] 3.3 Designing Data Types
     
 ### ToDo's
     1.3 Conditionals and Loops
-    - (book) 1.3.19, 25-26, 28, 39, 41, 42-46
-    - (web) 2, 3, 4, 15, 21, 24, 25, 29-84
-           
+        - (book) 1.3.19, 25-26, 28, 39, 41, 42-46
+        - (web) 2, 3, 4, 15, 21, 24, 25, 29-84
+    
+    1.4 Arrays
+        - (book) 1.4.12, 16, 20-41
+        - (web)   
