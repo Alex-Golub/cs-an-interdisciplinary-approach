@@ -6,8 +6,8 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/CS1-Programming with a Purpose-purple.svg" />
-<img src="https://img.shields.io/badge/Week-4-purple.svg" />
-<img src="https://img.shields.io/badge/Lecture-Input and Output-purple.svg" />
+<img src="https://img.shields.io/badge/Week-5-purple.svg" />
+<img src="https://img.shields.io/badge/Lecture-Defining Functions, Libraries and Clients-purple.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -23,7 +23,7 @@ NOTE: (Exercises.txt file contain verbal answers to none-code questions)
 ---
 Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](https://introcs.cs.princeton.edu/java/home/)  
 
-## Progress
+## Progress 
 - **Week 1**  
     - [x] 1.1 Your First Program   
     - [x] 1.2 Built-in Types of Data  
@@ -33,24 +33,28 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     - [x] Weekly Assignment - hello.zip 100/100
 - **Week 2**  
     - [ ] 1.3 Conditionals and Loops 
-        - [ ] Exercises
+        - [x] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
     - [x] Weekly Assignment - loops.zip 100/100
 - **Week 3**
     - [ ] 1.4 Arrays 
-        - [ ] Exercises
+        - [x] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
     - [x] Weekly Assignment - arrays.zip 100/100
-- **Week 4**
+- **Week 4 (NOTE: from now on use external stdlib.jar or algs4.jar)**
     - [ ] 1.5 Input and Output
-        - [ ] Exercises
+        - [x] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
+    - [x] Weekly Assignment - io.zip 100/100
     - [ ] 1.6 Case Study: Random Web Surfer  
 - **Week 5** 
     - [ ] 2.1 - 2 Defining Functions, Libraries and Clients
+        - [ ] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
 - **Week 6**  
     - [ ] 2.3 Recursion
 - **Week 7**  
@@ -69,4 +73,8 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     
     1.4 Arrays
         - (book) 1.4.12, 16, 20-41
-        - (web)   
+        - (web) in-progress   
+        
+    1.5 Input and Output
+        - (book) 1.5.8, 13, 19-21, 24
+        - (web) in-progress
