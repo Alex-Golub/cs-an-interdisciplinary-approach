@@ -1,0 +1,71 @@
+1.4.1 Write a program that declares, creates, and initializes an array a[] of length
+1000 and accesses a[1000].
+Does your program compile?      => compiles
+What happens when you run it?   => In run-time throws ArrayIndexOutOfBounds
+                                   arr has 1000 cells starting at index 0 to 999
+                                   thus, a[1000] is out of bound for this array
+A: int[] arr = new int[1000];
+   System.out.println(arr[1000]);
+
+****************************************************************************************************
+
+1.4.2 Describe and explain what happens when you try to compile a program with
+the following statement:
+int n = 1000;
+int[] a = new int[n*n*n*n];
+
+A: The maximum length of an array in Java is 2,147,483,647 (i.e. the maximum size of an int , 2^31 − 1).
+   1000^4 = 1,000,000,000,000 > 2^31 - 1
+   In this case because integer value will overflow and the result will be negative
+   we will get java.lang.NegativeArraySizeException: -727379968
+
+****************************************************************************************************
+
+1.4.5 What is wrong with the following code fragment?
+      int[] a;
+      for (int i = 0; i < 10; i++)
+        a[i] = i * i; // Variable 'a' might not have been initialized
+
+A: On the first line a is a reference to an integer array but no actual array
+   has been initialized thus, a[i] will not compile.
+
+****************************************************************************************************
+
+1.4.7 What does the following code fragment print?
+
+      int[] a = new int[10];
+      for (int i = 0; i < 10; i++)
+        a[i] = 9 - i;               // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+      for (int i = 0; i < 10; i++)
+        a[i] = a[a[i]];             // [0, 1, 2, 3, 4, 4, 3, 2, 1, 0]
+      for (int i = 0; i < 10; i++)
+        System.out.println(a[i]);   // 0 1 2 3 4 4 3 2 1 0
+
+****************************************************************************************************
+
+1.4.8 Which values does the following code put in the array a[]?
+
+      int n = 10;
+      int[] a = new int[n];
+      a[0] = 1;                   // 1 0 0 0 0 0 0 0 0
+      a[1] = 1;                   // 1 1 0 0 0 0 0 0 0
+      for (int i = 2; i < n; i++)
+        a[i] = a[i-1] + a[i-2];   // 1 1 2 3 4 7 11 18 29 => Fibonacci up to n'th term
+
+
+1.4.9 What does the following code fragment print?
+
+      int[] a = { 1, 2, 3 };
+      int[] b = { 1, 2, 3 };
+      System.out.println(a == b); // false
+
+      A: Arrays in java are objects which allocated on the heap
+         For each object there is a address reference that we can point to
+         to get the content at that address.
+         Using == we check whether the arrays a and b are in the same address
+         This way of creating array is the same as int[] a = new int[] {1, 2, 3}
+         Still we use the new keyword to allocate memory for the array
+         So, two new keywords will allocate space for two arrays which will be in
+         different memory locations thus a == b will be false
+
+****************************************************************************************************
