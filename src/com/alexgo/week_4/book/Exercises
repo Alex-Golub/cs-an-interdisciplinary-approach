@@ -1,0 +1,41 @@
+1.5.9 Suppose that the file input.txt contains the two strings F and F.
+What does the following command do (see exercise 1.2.35)?
+  % java Dragon < input.txt | java Dragon | java Dragon
+
+  public class Dragon  {
+    public static void main(String[] args) {
+      String dragon = StdIn.readString();
+      String nogard = StdIn.readString();
+      StdOut.print(dragon + "L" + nogard);
+      StdOut.print(" ");
+      StdOut.print(dragon + "R" + nogard);
+      StdOut.println();
+    }
+  }
+
+A: This program using "re-directions (< or >)" to get its input from a input.txt file.
+   The output of the first run of the program is the input for the second one
+   This is achieved using "piping (|)".
+
+   Program Trace: Dragon < input.txt
+   dragon     nogard     stdout
+   F          F          FLF FRF   // this stdout is the stdin for next java Dragon i.e. java Dragon < Dragon < input.txt
+   FLF        FRF        FLFLFRF FLFRFRF
+   FLFLFRF    FLFRFRF    FLFLFRFLFLFRFRF FLFLFRFRFLFRFRF
+
+****************************************************************************************************
+
+1.5.14 Which of the following require saving all the values from standard input (in
+an array, say), and which could be implemented as a filter using only a fixed number
+of variables? For each, the input comes from standard input and consists of n real
+numbers between 0 and 1.
+• Print the maximum and minimum numbers.                    // min and max variables are enough
+• Print the sum of the squares of the n numbers.            // sum variable is enough
+• Print the average of the n numbers.                       // total and count variables are enough
+• Print the median of the n numbers.                        // array required, must be sorted and then get median
+• Print the percentage of numbers greater than the average. // array required, after we calculate average we must read numbers again
+• Print the n numbers in increasing order.                  // array required
+• Print the n numbers in random order.                      // array required
+
+****************************************************************************************************
+
