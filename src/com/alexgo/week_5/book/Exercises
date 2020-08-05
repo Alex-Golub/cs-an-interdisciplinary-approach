@@ -1,0 +1,64 @@
+2.1.8 Give the function-call trace for java Harmonic 3 5
+
+public class Harmonic {
+  public static double harmonic(int n) {
+    double sum = 0.0;
+    for (int i = 1; i <= n; i++)
+      sum += 1.0 / i;
+    return sum;
+  }
+
+  public static void main(String[] args) {
+    for (int i = 0; i < args.length; i++) {
+      int arg = Integer.parseInt(args[i]);
+      double value = harmonic(arg);
+      StdOut.println(value);
+    }
+  }
+}
+
+i = 0
+arg = 3
+harmonic(3)
+  sum = 0.0
+  i = 1
+  sum = 1.0
+  i = 2
+  sum = 1.5
+  i = 3
+  sum = 1.83
+value = 1.83
+i = 1
+arg = 5
+harmonic(5)
+  sum = 0.0
+  i = 1
+  sum = 1.0
+  i = 2
+  sum = 1.5
+  i = 3
+  sum = 1.83
+  i = 4
+  sum = 2.08
+  i = 5
+  sum = 2.28
+value = 2.28
+
+****************************************************************************************************
+
+2.1.12 Consider the static method duplicate() below.
+public static String duplicate(String s) {
+  String t = s + s;
+  return t;
+}
+
+What does the following code fragment do?
+  String s = "Hello";
+  s = duplicate(s);                       // HelloHello
+  String t = "Bye";
+  t = duplicate(duplicate(duplicate(t))); // ByeByeByeByeByeByeByeBye
+  StdOut.println(s + t);                  // HelloHelloByeByeByeByeByeByeByeBye
+
+****************************************************************************************************
+
+

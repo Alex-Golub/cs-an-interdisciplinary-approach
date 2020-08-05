@@ -51,7 +51,11 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     - [x] Weekly Assignment - io.zip 100/100
     - [ ] 1.6 Case Study: Random Web Surfer  
 - **Week 5** 
-    - [ ] 2.1 - 2 Defining Functions, Libraries and Clients
+    - [ ] 2.1 Defining Functions
+        - [x] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
+    - [ ] 2.2 Libraries and Clients
         - [ ] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
@@ -76,5 +80,8 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - (web) in-progress   
         
     1.5 Input and Output
-        - (book) 1.5.8, 13, 19-21, 24
+        - (book) 1.5.8, 13, 19-21, 24, 27-28, 30-37 
         - (web) in-progress
+    
+    2.1 Defining Functions
+        - (book) 2.1.15, 24
