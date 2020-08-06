@@ -84,4 +84,9 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - (web) in-progress
     
     2.1 Defining Functions
-        - (book) 2.1.15, 24
+        - (book) 2.1.15, 24, 29-36
+        - (web) in-progress
+    
+    2.2 Libraries and Clients
+        - (book)
+        - (web)
