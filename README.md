@@ -6,8 +6,8 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/CS1-Programming with a Purpose-purple.svg" />
-<img src="https://img.shields.io/badge/Week-5-purple.svg" />
-<img src="https://img.shields.io/badge/Lecture-Defining Functions, Libraries and Clients-purple.svg" />
+<img src="https://img.shields.io/badge/Week-6-purple.svg" />
+<img src="https://img.shields.io/badge/Lecture-Recursion-purple.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -50,7 +50,7 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - [ ] Web Exercises
     - [x] Weekly Assignment - io.zip 100/100
     - [ ] 1.6 Case Study: Random Web Surfer  
-- **Week 5** 
+- **Week 5 (Note: from now on libraries defined in ToolKit package)** 
     - [ ] 2.1 Defining Functions
         - [x] Exercises
         - [ ] Creative Exercises
@@ -59,8 +59,13 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - [ ] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
+    - [x] Weekly Assignment - functions.zip 99/100
 - **Week 6**  
     - [ ] 2.3 Recursion
+        - [ ] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
+        - [ ] Weekly Assignment
 - **Week 7**  
     - [ ] 4.1 Performance (Analysis of Algorithms)
 - **Week 8**  
@@ -88,5 +93,9 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - (web) in-progress
     
     2.2 Libraries and Clients
-        - (book)
-        - (web)
+        - (book) 2.2.3-5, 7-28
+        - (web) in-progress
+    
+    2.3 Recursion
+        - (book) 
+        - (web) 
