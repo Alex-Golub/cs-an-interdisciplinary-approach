@@ -1,0 +1,101 @@
+2.3.1 What happens if you call factorial() with a negative value of n?
+      With a large value of, say, 35?
+
+A: Considering the factorial method on page 264:
+    public static long factorial(int n) {
+      if (n == 1) return 1;
+      return n * factorial(n-1);
+    }
+
+    For negative values [0, -1, -2, ...) we get infinite recursive calls because of the
+    base case which checks only for value 1.
+    Base case should be changed to if (n <= 1) return 1;
+    For value 35 we get 35! which is value is greater then Long.MAX_VALUE so the result is not what
+    we expect due to Long overflow.
+    right answer is 35! = 10333147966386144929666651337523200000000
+    with long data type we get 35! = 6399018521010896896
+
+****************************************************************************************************
+
+2.3.3 Give the sequence of integers printed by a call to ex233(6):
+      public static void ex233(int n) {
+        if (n <= 0) return;
+        StdOut.println(n);
+        ex233(n-2);
+        ex233(n-3);
+        StdOut.println(n);
+      }
+
+A: ex233(6) -> ex233(4) -> ex233(2) -> ex233(0)
+                                    -> ex233(-1)
+                        -> ex233(1) -> ex233(-1)
+                                    -> ex233(-2)
+            -> ex233(3) -> ex233(1) -> ex233(-1)
+                                    -> ex233(-2)
+                        -> ex233(-1)
+
+      6 4 2 2 1 1 4 3 1 1 3 6
+
+****************************************************************************************************
+
+2.3.4 Give the value of ex234(6):
+      public static String ex234(int n) {
+        if (n <= 0) return "";
+        return ex234(n-3) + n + ex234(n-2) + n;
+      }
+
+A: ex234(6) -> ex234(3) -> ex234(0)
+                        -> ex234(1) -> ex234(-2)
+                                    -> ex234(-1)
+                -> ex234(4) -> ex234(1) -> ex234(-2)
+                                        -> ex234(-1)
+                            -> ex234(2) -> ex234(-1)
+                                        -> ex234(0)
+
+      "311361142246"
+
+****************************************************************************************************
+
+2.3.6 Given four positive integers a, b, c, and d, explain what value is computed by gcd(gcd(a, b), gcd(c, d)).
+
+A: Result is gcd of a,b,c and d combined i.e. hcf(a, b, c, d)
+
+****************************************************************************************************
+
+2.3.7 Explain in terms of integers and divisors the effect of the following Euclidlike function:
+      public static boolean gcdlike(int p, int q) {
+        if (q == 0) return (p == 1);
+        return gcdlike(q, p % q);
+      }
+
+A: Check if p and q are relatively-prime i.e. gcd(p, q) = 1
+
+****************************************************************************************************
+
+2.3.8 Consider the following recursive function:
+      public static int mystery(int a, int b) {
+        if (b == 0)     return 0;
+        if (b % 2 == 0) return mystery(a+a, b/2);
+        return mystery(a+a, b/2) + a;
+      }
+What are the values of mystery(2, 25) and mystery(3, 11)?
+Given positive integers a and b, describe what value mystery(a, b) computes.
+Then answer the same question, but replace + with * and return 0 with return 1.
+
+A: mystery(2, 25) -> mystery(4, 12) + 2 -> mystery(8, 6) -> mystery(16, 3) + 16 -> mystery(32, 1) + 32 -> mystery(64, 0)
+        50        <-         50         <-     48        <-        32 + 16      <-       0 + 32        <- 0
+
+   mystery(3, 11) result is 3 * 11 = 33
+
+   mystery computes a * b
+
+     public static int mystery(int a, int b) {
+       if (b == 0)     return 1;
+       if (b % 2 == 0) return mystery(a*a, b/2);
+       return mystery(a*a, b/2) * a;
+     }
+
+     This version computes a^b
+
+****************************************************************************************************
+
