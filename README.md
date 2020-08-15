@@ -6,8 +6,8 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/CS1-Programming with a Purpose-purple.svg" />
-<img src="https://img.shields.io/badge/Week-6-purple.svg" />
-<img src="https://img.shields.io/badge/Lecture-Recursion-purple.svg" />
+<img src="https://img.shields.io/badge/Week-7-purple.svg" />
+<img src="https://img.shields.io/badge/Lecture-Performance-purple.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -62,12 +62,16 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     - [x] Weekly Assignment - functions.zip 99/100
 - **Week 6**  
     - [ ] 2.3 Recursion
+        - [x] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
+    - [ ] Weekly Assignment - recursion.zip 83/100
+- **Week 7**  
+    - [ ] 4.1 Performance (Analysis of Algorithms)
         - [ ] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
-        - [ ] Weekly Assignment
-- **Week 7**  
-    - [ ] 4.1 Performance (Analysis of Algorithms)
+    - [ ] Weekly Assignment
 - **Week 8**  
     - [ ] 3.1 Using Data Types (ADT)
 - **Week 9**  
@@ -97,5 +101,5 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - (web) in-progress
     
     2.3 Recursion
-        - (book) 
+        - (book) 2.3.9, 11-13, 
         - (web) 
