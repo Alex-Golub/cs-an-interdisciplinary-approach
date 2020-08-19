@@ -1,0 +1,86 @@
+4.1.4 Prove by induction that the number of (unordered) pairs of integers
+between 0 and n-1 is n(n-1)/2,
+and then prove by induction that the number of (unordered) triples of integers
+between 0 and n-1 is n (n-1)(n-2)/6.
+
+ANS:
+Base Case:      n=1 => 1(0)/2=0 between [0,0] there are no pairs.
+Induction step: n>1 => count all pairs and don't include n-1, we will have (n-1)(n-2)/2
+e.g n=3, [0,2] => 0 1 2
+               => count all pairs without n-1, 01 10 => 2
+               => count all pairs that do include n-1, 02 12 => 2
+               => total is: (n-1)(n-2)/2 + (n-1) = n(n-1)/2
+
+               TODO
+
+****************************************************************************************************
+
+4.1.7 What is the value of the variable count, as a function of n, after running the
+following code fragment?
+
+    long count = 0;
+    for (int i = 0; i < n; i++)
+      for (int j = i + 1; j < n; j++)
+        for (int k = j + 1; k < n; k++)
+          count++;
+
+ANS: This code fragment counts all possible combinations of 3 numbers
+i.e. nC3 => n! / (n-3)!3!
+         => n(n-1)(n-2)(n-3)! / 6(n-3)!
+         => n(n-1)(n-2) / 6
+
+****************************************************************************************************
+
+4.1.8 Use tilde notation to simplify each of the following formulas, and give the order of growth of each:
+  a. n(n - 1)(n - 2)(n - 3) / 24 = n! / (n-4)!4! = nC4, using newton binomial T(3+1)=(nC4)a^n-4b^4 => order of growth is n^4
+  b. (n - 2)(lgn - 2)(lgn + 2)   = nlgnlgn +...  = n(lgn)^2 = 2nlgn ~= nlgn                        => linearithmic
+  c. n (n + 1) - n^2             = n^2 + n - n^2 = n                                               => linear
+  d. n (n + 1) / 2 + nlgn        = (0.5)n^2 + n + nlgn ~= n^2 + nlgn ~= n^2                        => quadratic
+  e. ln((n - 1)(n - 2)(n - 3))^2 ~= ln(n^3)^2 = (3ln(n))^2 = 9(ln(n))^2 ~= (ln(n))^2               => logarithmic
+
+Recall: We work with the leading-term of mathematical expressions thus we use tilda-notation(~)
+        1. ∼g(n) or g(n) ∼ f(n) is quantity that when g(n)/f(n) -> 1 when n -> ∞
+        2. We ignore complicated parts of an expression that represent small values.
+        3. We focus on the instructions that are executed most frequently
+        4. Running time satisfies the relationship T(n) ∼ cf(n) where c is a constant and f(n) a function known as
+           the order of growth of the running time.
+        5. Knowing the order of growth typically leads immediately to a doubling hypothesis.
+
+****************************************************************************************************
+
+4.1.9 Determine the order of growth of the running time of this statement in ThreeSum as a function of the
+number of integers n on standard input: int[] a = StdIn.readAllInts();
+
+    public static int[] readAllInts() {
+        String[] fields = readAllStrings();
+        int[] vals = new int[fields.length];       // initialization is linear in Java (allocate and assign default values)
+        for (int i = 0; i < fields.length; i++)    // n
+            vals[i] = Integer.parseInt(fields[i]);
+        return vals;
+    } // Order of growth: n + n = 2n => n Linear
+
+****************************************************************************************************
+
+4.1.10 Determine whether the following code fragment takes linear time, quadratic time, or cubic time (as a function of n).
+    for (int i = 0; i < n; i++)       // n
+      for (int j = 0; j < n; j++)     // n
+        if (i == j) c[i][j] = 1.0;
+        else        c[i][j] = 0.0;
+
+ANS: Two for loops. Outer executed n time, inner executes n times for each i thus T(n) ~= nxn => quadratic
+
+****************************************************************************************************
+
+4.1.11 Suppose the running times of an algorithm for inputs of size
+1,000, 2,000, 3,000, and 4,000 are 5 seconds, 20 seconds, 45 seconds, and 80 seconds, respectively.
+Estimate how long it will take to solve a problem of size 5,000.
+Is the algorithm linear, linearithmic, quadratic, cubic, or exponential?
+
+ANS: input-size     T(n) (seconds)
+          1000                   5
+          2000                  20     n => 2n       => 20/5  = 4
+          3000                  45     n => 1.5n     => 45/20 = 2.25
+          4000                  80     n => 1.3n     => 80/45 = 1.77
+          5000                         n => 1.25n    => x/80
+
+          TODO
