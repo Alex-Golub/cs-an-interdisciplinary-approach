@@ -6,8 +6,8 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/CS1-Programming with a Purpose-purple.svg" />
-<img src="https://img.shields.io/badge/Week-7-purple.svg" />
-<img src="https://img.shields.io/badge/Lecture-Performance-purple.svg" />
+<img src="https://img.shields.io/badge/Week-8-purple.svg" />
+<img src="https://img.shields.io/badge/Lecture-Using Data Types (ADT)-purple.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -65,15 +65,19 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - [x] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
-    - [ ] Weekly Assignment - recursion.zip 83/100
+    - [x] Weekly Assignment - recursion.zip 83/100
 - **Week 7**  
     - [ ] 4.1 Performance (Analysis of Algorithms)
         - [ ] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
-    - [ ] Weekly Assignment
+    - [x] Weekly Assignment - performance.zip 100/100
 - **Week 8**  
     - [ ] 3.1 Using Data Types (ADT)
+        - [ ] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
+    - [ ] Weekly Assignment
 - **Week 9**  
     - [ ] 3.2 Creating Data Types
 - **Week 10** 
@@ -86,11 +90,11 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     
     1.4 Arrays
         - (book) 1.4.12, 16, 20-41
-        - (web) in-progress   
+        - (web) TODO   
         
     1.5 Input and Output
         - (book) 1.5.8, 13, 19-21, 24, 27-28, 30-37 
-        - (web) in-progress
+        - (web) TODO
     
     2.1 Defining Functions
         - (book) 2.1.15, 24, 29-36
@@ -98,8 +102,14 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     
     2.2 Libraries and Clients
         - (book) 2.2.3-5, 7-28
-        - (web) in-progress
+        - (web) TODO
     
     2.3 Recursion
         - (book) 2.3.9, 11-13, 
-        - (web) 
+        - (web) TODO
+    
+    4.1 Performance
+        - (book) 4.1.5-6, 11-27
+        - (web) TODO
+    
+    3.1 Using Data Types (ADT)
