@@ -6,8 +6,8 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/CS1-Programming with a Purpose-purple.svg" />
-<img src="https://img.shields.io/badge/Week-8-purple.svg" />
-<img src="https://img.shields.io/badge/Lecture-Using Data Types (ADT)-purple.svg" />
+<img src="https://img.shields.io/badge/Week-9-purple.svg" />
+<img src="https://img.shields.io/badge/Lecture-Creating Data Types-purple.svg" />
 </p>
 
 This repository contains my solution code for two courses offered by
@@ -77,9 +77,13 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - [ ] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
-    - [ ] Weekly Assignment
+    - [x] Weekly Assignment - oop1.zip 100/100
 - **Week 9**  
     - [ ] 3.2 Creating Data Types
+        - [ ] Exercises
+        - [ ] Creative Exercises
+        - [ ] Web Exercises
+    - [ ] Weekly Assignment
 - **Week 10** 
     - [ ] 3.3 Designing Data Types
     
@@ -113,3 +117,4 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - (web) TODO
     
     3.1 Using Data Types (ADT)
+        - (book) 3.1.7-8, 
