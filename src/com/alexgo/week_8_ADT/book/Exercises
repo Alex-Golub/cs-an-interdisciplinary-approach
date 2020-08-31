@@ -1,0 +1,33 @@
+3.1.13 What does the following code fragment print?
+        String string1 = "hello";
+        String string2 = string1;
+        string1 = "world";         // same as string1 = new String("world"); i.e. string1 points to new String
+        StdOut.println(string1);   // "world"
+        StdOut.println(string2);   // "hello"
+
+    output: "world"
+            "hello"
+
+****************************************************************************************************
+
+3.1.18 What does the following recursive function return?
+        public static String mystery(String s) {
+           int n = s.length();
+           if (n <= 1) return s;
+           String a = s.substring(0, n/2);
+           String b = s.substring(n/2, n);
+           return mystery(b) + mystery(a);
+        }
+
+    s = "what"
+    -> a = "wh", b = "at"
+      -> a = "w", b = "h"
+      -> a = "a", b = "t"
+    -> "tahw"
+
+ANS: reverse string s
+
+****************************************************************************************************
+
+
+

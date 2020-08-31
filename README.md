@@ -74,7 +74,7 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
     - [x] Weekly Assignment - performance.zip 100/100
 - **Week 8**  
     - [ ] 3.1 Using Data Types (ADT)
-        - [ ] Exercises
+        - [x] Exercises
         - [ ] Creative Exercises
         - [ ] Web Exercises
     - [x] Weekly Assignment - oop1.zip 100/100
@@ -117,4 +117,4 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - (web) TODO
     
     3.1 Using Data Types (ADT)
-        - (book) 3.1.7-8, 
+        - (book) 3.1.7-8, 23-24, 26
