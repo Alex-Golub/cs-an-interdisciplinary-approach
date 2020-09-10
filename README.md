@@ -9,7 +9,6 @@
 <img src="https://img.shields.io/badge/CS1-Programming with a Purpose-purple.svg" />
 <img src="https://img.shields.io/badge/Week-10-purple.svg" />
 <img src="https://img.shields.io/badge/Lecture-Designing Data Types-purple.svg" /> 
-<img src="https://img.shields.io/badge/Grades-Designing Data Types-purple.svg" /> 
 <br>
 <img src="https://img.shields.io/badge/Status-IN PROGRESS-orange.svg" />
 <img src="https://img.shields.io/badge/CS2-Algorithms, Theory, and Machines-purple.svg" />
@@ -19,7 +18,7 @@
 
 This repository contains my solution code for two courses offered by
 Princeton University on Coursera.
-1. Part 1: [Computer Science: Programming with a Purpose](https://www.coursera.org/learn/cs-programming-java)  
+1. Part 1: [Computer Science: Programming with a Purpose](https://www.coursera.org/learn/cs-programming-java)
 2. Part 2: [Computer Science: Algorithms, Theory, and Machines](https://www.coursera.org/learn/cs-algorithms-theory-machines)
 ---    
 Each week directory contains solutions to:
@@ -31,7 +30,7 @@ NOTE: (Exercises.txt file contain verbal answers to none-code questions)
 Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](https://introcs.cs.princeton.edu/java/home/)  
 
 ## Progress 
-### Computer Science: Programming with a Purpose
+### Part 1: Computer Science: Programming with a Purpose - [Grades](https://github.com/Alex-Golub/cs-an-interdisciplinary-approach/blob/master/cs1-grades.jpg)
 - **[Week 1](https://github.com/Alex-Golub/cs-an-interdisciplinary-approach/tree/master/src/com/alexgo/week_1)**  
     - [x] 1.1 Your First Program   
     - [x] 1.2 Built-in Types of Data  
@@ -99,9 +98,8 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - [ ] Creative Exercises
         - [ ] Web Exercises
     - [x] Weekly Assignment - barchart.zip 100/100
-- **Grades**
 ---
-### Computer Science: Algorithms, Theory, and Machines
+### Part 2: Computer Science: Algorithms, Theory, and Machines
 
 
 ---
