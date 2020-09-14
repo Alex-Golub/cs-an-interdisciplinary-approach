@@ -2,9 +2,10 @@ package com.alexgo.week_2.book;
 
 /**
  * 1.3.21 Modify Binary to get a program Kary that takes two integer commandline arguments i and k
- * and converts i to base k. Assume that i is an integer in Java’s
- * long data type and that k is an integer between 2 and 16. For bases greater than 10,
- * use the letters A through F to represent the 11th through 16th digits, respectively.
+ * and converts i to base k.
+ * Assume that i is an integer in Java’s long data type and that k is an integer between 2 and 16.
+ * For bases greater than 10, use the letters A through F to represent
+ * the 11th through 16th digits, respectively.
  *
  * javac Ex1_3_21_Kary.class
  * java Ex1_3_21_Kary 9999999 16
@@ -26,17 +27,8 @@ package com.alexgo.week_2.book;
  */
 class Ex1_3_21_Kary {
   public static void main(String[] args) {
-    long i = Long.parseLong(args[0]);
-
-    // integer between 2 and 16
-    // for bases > 10 A - F will represent
-    // 11th through 16th base respectively
-    int k = Integer.parseInt(args[1]);
-
-    if (k < 2 || k > 16) {
-      System.out.println("Base range 2 - 16, given " + k);
-      return;
-    }
+    long i = Long.parseLong(args[0]);   // number to convert
+    int k = Integer.parseInt(args[1]);  // base to convert i to (assuming k = [2, 16]
 
     // accumulate multiples of base k
     long power = 1;
@@ -84,6 +76,7 @@ class Ex1_3_21_Kary {
       }
       power /= 2;
     }
+
     System.out.println();
   }
 }

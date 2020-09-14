@@ -107,7 +107,7 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
 ---
 ### ToDo's
     1.3 Conditionals and Loops
-        - (book) 1.3.19, 25-26, 28, 39, 41, 42-46
+        - (book) 39, 41, 42-46
         - (web) 2, 3, 4, 15, 21, 24, 25, 29-84
     
     1.4 Arrays
