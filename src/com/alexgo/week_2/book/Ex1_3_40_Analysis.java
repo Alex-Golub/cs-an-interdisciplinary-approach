@@ -11,7 +11,7 @@ package com.alexgo.week_2.book;
  *
  * Created by ag on 17-Jul-20 2:45 PM
  */
-public class Ex1_3_40_Analysis {
+class Ex1_3_40_Analysis {
   public static void main(String[] args) {
     double x = Double.parseDouble(args[0]);
 

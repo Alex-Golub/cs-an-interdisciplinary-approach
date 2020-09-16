@@ -39,7 +39,7 @@ package com.alexgo.week_2.book;
  *
  * Created by ag on 16-Jul-20 5:01 PM
  */
-public class Ex1_3_37_RandomWalker {
+class Ex1_3_37_RandomWalker {
   public static void main(String[] args) {
     int n = Integer.parseInt(args[0]); // n >= 0
 

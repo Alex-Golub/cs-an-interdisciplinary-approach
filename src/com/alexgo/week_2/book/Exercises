@@ -110,3 +110,19 @@ A:     x(K+1) = x(K) – f(x) / f’(x)
        x(K + 1) = (1 / N) * ((N - 1) * x(K) + A / x(K) ^ (N - 1))
 
 *******************************************************************************************
+
+1.3.44 Sorting three numbers.
+Suppose that the variables a, b, c, and t are all of the type int.
+Explain why the following code puts a, b, and c in ascending order:
+    if (a > b) { t = a; a = b; b = t; }
+    if (a > c) { t = a; a = c; c = t; }
+    if (b > c) { t = b; b = c; c = t; }
+
+A: Suppose a = 5, b = 2, c = 3
+a    b    c    t
+5    2    3    5     if (a > b) { t = a; a = b; b = t; }
+2    5    3    5     if (a > c) { t = a; a = c; c = t; }
+2    3    5    5     if (b > c) { t = b; b = c; c = t; }
+
+*******************************************************************************************
+
