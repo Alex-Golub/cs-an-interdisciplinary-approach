@@ -39,10 +39,10 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
         - [x] Web Exercises
     - [x] Weekly Assignment - hello.zip 100/100
 - **[Week 2](https://github.com/Alex-Golub/cs-an-interdisciplinary-approach/tree/master/src/com/alexgo/week_2)**  
-    - [ ] 1.3 Conditionals and Loops 
+    - [x] 1.3 Conditionals and Loops 
         - [x] Exercises
-        - [ ] Creative Exercises
-        - [ ] Web Exercises
+        - [x] Creative Exercises
+        - [x] Web Exercises
     - [x] Weekly Assignment - loops.zip 100/100
 - **[Week 3](https://github.com/Alex-Golub/cs-an-interdisciplinary-approach/tree/master/src/com/alexgo/week_3)**
     - [ ] 1.4 Arrays 
@@ -103,10 +103,18 @@ Course companion book and website -> [Book](https://amzn.to/2OaojuR), [Website](
 
 
 ---
-### ToDo's
+#### Possible Interview Questions
+    1.3 Conditionals and Loops 
+        Web - https://introcs.cs.princeton.edu/java/13flow/
+            21 - Number-to-English.
+            24 - Decimal expansion of rational numbers (Floyd's Cycle Detection algorithm).
+            36 - Thue–Morse sequence.
+            52 - Print a heart.
+---        
+#### ToDo's
     1.3 Conditionals and Loops
-        - (book) 39, 41, 42-46
-        - (web) 2, 3, 4, 15, 21, 24, 25, 29-84
+        - (book) 39, 43, 45
+        - (web) 2, 3, 4, 15, 19, 21, 47, 53, 55, 56, 57, 59-84
     
     1.4 Arrays
         - (book) 1.4.12, 16, 20-41
