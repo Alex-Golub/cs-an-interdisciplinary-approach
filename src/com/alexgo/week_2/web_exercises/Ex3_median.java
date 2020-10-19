@@ -14,6 +14,6 @@ class Ex3_median {
     int d = Integer.parseInt(args[3]);
     int e = Integer.parseInt(args[4]);
 
-    // FIXME
+    // TODO
   }
 }

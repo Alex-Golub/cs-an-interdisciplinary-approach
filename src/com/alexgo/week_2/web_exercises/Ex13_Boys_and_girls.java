@@ -2,7 +2,8 @@ package com.alexgo.week_2.web_exercises;
 
 /**
  * 13. Boys and girls. 
- * A couple beginning a family decides to keep having children until they have at least one of either sex. 
+ * A couple beginning a family decides to keep having children until they have at least
+ * one of either sex.
  * Estimate the average number of children they will have via simulation. 
  * Also estimate the most common outcome (record the frequency counts for 2, 3, and 4 children, 
  * and also for 5 and above). 
@@ -26,11 +27,6 @@ class Ex13_Boys_and_girls {
   public static void main(String[] args) {
     int trials = Integer.parseInt(args[0]);
 
-    if (trials <= 0) {
-      System.out.println("# of trials should be grater then zero, existing...");
-      return;
-    }
-
     int totalNumberOfChildren = 0;
 
     int twoFreq = 0;
@@ -40,33 +36,34 @@ class Ex13_Boys_and_girls {
     int sixAndMoreFreq = 0;
 
     for (int t = 0; t < trials; t++) {
-
-      boolean isBoy = false, isGirl = false;
-      int childrenPerTrial = 0;
+      boolean isBoy  = false;
+      boolean isGirl = false;
+      int childrenPerCouple = 0;
 
       do {
         if (Math.random() < 0.5) isBoy = true;
         else                     isGirl = true;
 
         totalNumberOfChildren++;
-        childrenPerTrial++;
+        childrenPerCouple++;
 
       } while (!isBoy || !isGirl);
 
-      /* Determine number of children frequency */
-      if      (childrenPerTrial == 2) twoFreq++;
-      else if (childrenPerTrial == 3) threeFreq++;
-      else if (childrenPerTrial == 4) fourFreq++;
-      else if (childrenPerTrial == 5) fiveFreq++;
-      else                            sixAndMoreFreq++;
-
+      // Determine number of children frequency
+      switch (childrenPerCouple) {
+        case 2:  twoFreq++;        break;
+        case 3:  threeFreq++;      break;
+        case 4:  fourFreq++;       break;
+        case 5:  fiveFreq++;       break;
+        default: sixAndMoreFreq++; break;
+      }
     }
 
-    System.out.println("Two children frequency " +   100 * twoFreq / totalNumberOfChildren + "%");
-    System.out.println("Three children frequency " + 100 * threeFreq / totalNumberOfChildren + "%");
-    System.out.println("Four children frequency " +  100 * fourFreq / totalNumberOfChildren + "%");
-    System.out.println("Five children frequency " +  100 * fiveFreq / totalNumberOfChildren + "%");
-    System.out.println("Six and more children frequency " + 100 * sixAndMoreFreq / totalNumberOfChildren + "%");
+    System.out.println("Two children \t\t" +   100 * twoFreq / totalNumberOfChildren + "%");
+    System.out.println("Three children \t" + 100 * threeFreq / totalNumberOfChildren + "%");
+    System.out.println("Four children \t" +  100 * fourFreq / totalNumberOfChildren + "%");
+    System.out.println("Five children \t" +  100 * fiveFreq / totalNumberOfChildren + "%");
+    System.out.println("Six and more children \t" + 100 * sixAndMoreFreq / totalNumberOfChildren + "%");
 
     System.out.println("\nAverage # of children per couple: " + totalNumberOfChildren / trials);
     System.out.println("Total number of children: " + totalNumberOfChildren);

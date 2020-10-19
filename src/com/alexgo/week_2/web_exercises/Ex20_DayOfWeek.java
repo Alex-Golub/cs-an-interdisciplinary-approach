@@ -1,8 +1,9 @@
 package com.alexgo.week_2.web_exercises;
 
 /**
- * 20. Rewrite DayOfWeek.java from Exercise 1.2.29 so that it prints the day of the week as
- * Sunday, Monday, and so forth instead of an integer between 0 and 6.
+ * 20. Rewrite DayOfWeek.java from Exercise 1.2.29 so that it prints the day
+ * of the week as Sunday, Monday, and so forth instead of an integer
+ * between 0 and 6.
  *
  * Created by ag on 20-Jul-20 8:22 PM
  */

@@ -21,7 +21,7 @@ public class Ex8_Hurricane {
       System.out.println("Wind speed " + windSpeed + " mile/hour is not qualified to be a Hurricane");
     } else {
       System.out.print("Category ");
-      if (windSpeed <= 95)       System.out.println(1);
+      if      (windSpeed <= 95)  System.out.println(1);
       else if (windSpeed <= 110) System.out.println(2);
       else if (windSpeed <= 130) System.out.println(3);
       else if (windSpeed <= 155) System.out.println(4);

@@ -8,11 +8,6 @@ package com.alexgo.week_2.web_exercises;
  */
 class Ex2_Distinct {
   public static void main(String[] args) {
-    int a = Integer.parseInt(args[0]);
-    int b = Integer.parseInt(args[1]);
-    int c = Integer.parseInt(args[2]);
-
-    // FIXME
-
+    // TODO
   }
 }

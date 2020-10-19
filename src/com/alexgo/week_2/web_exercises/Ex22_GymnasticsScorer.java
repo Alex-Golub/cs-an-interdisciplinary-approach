@@ -2,10 +2,13 @@ package com.alexgo.week_2.web_exercises;
 
 /**
  * 22. Gymnastics judging.
- * A gymnast's score is determined by a panel of 6 judges who each decide a score between 0.0 and 10.0.
- * The final score is determined by discarding the high and low scores, and averaging the remaining 4.
- * Write a program GymnasticsScorer.java that takes 6 real command line inputs representing the 6 scores
- * and prints their average, after throwing out the high and low scores.
+ * A gymnast's score is determined by a panel of 6 judges who each decide
+ * a score between 0.0 and 10.0.
+ * The final score is determined by discarding the high and low scores,
+ * and averaging the remaining 4.
+ * Write a program GymnasticsScorer.java that takes 6 real command line inputs
+ * representing the 6 scores and prints their average,
+ * after throwing out the high and low scores.
  *
  * Created by ag on 20-Jul-20 9:29 PM
  */

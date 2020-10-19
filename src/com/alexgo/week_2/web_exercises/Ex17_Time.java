@@ -13,7 +13,7 @@ package com.alexgo.week_2.web_exercises;
  *
  * Created by ag on 19-Jul-20 4:43 PM
  */
-class Ex17 {
+class Ex17_Time {
   public static void main(String[] args) {
     int time = 0;
     final int MIDNIGHT = 24;
@@ -26,6 +26,5 @@ class Ex17 {
 
       time++;
     }
-
   }
 }

@@ -23,23 +23,25 @@ public class Ex12_RGBtoHSV {
     int b = Integer.parseInt(args[2]);
 
     // validate color values
-    if (r < 0) r = 0;
-    if (r > 255) r = 255;
+    final int MIN_VALUE = 0;
+    final int MAX_VALUE = 255;
+    if (r < MIN_VALUE) r = MIN_VALUE;
+    if (r > MAX_VALUE) r = MAX_VALUE;
 
-    if (g < 0) g = 0;
-    if (g > 255) g = 255;
+    if (g < MIN_VALUE) g = MIN_VALUE;
+    if (g > MAX_VALUE) g = MAX_VALUE;
 
-    if (b < 0) b = 0;
-    if (b > 255) b = 255;
+    if (b < MIN_VALUE) b = MIN_VALUE;
+    if (b > MAX_VALUE) b = MAX_VALUE;
 
     RGBtoHSV(r, g, b);
 
   }
 
   private static void RGBtoHSV(int r, int g, int b) {
-    double red = r / 255.0;
+    double red   = r / 255.0;
     double green = g / 255.0;
-    double blue = b / 255.0;
+    double blue  = b / 255.0;
 
     double cMax = Math.max(red, Math.max(green, blue));
     double cMin = Math.min(red, Math.min(green, blue));
@@ -63,7 +65,7 @@ public class Ex12_RGBtoHSV {
     HSVtoRGB(h, s, v);
   }
 
-  private static void HSVtoRGB(double h, double s, double v) { // FIXME
+  private static void HSVtoRGB(double h, double s, double v) {
     double c = v * s;
     double x = c * (1 - Math.abs((h / (Math.PI / 3)) % 2 - 1));
     double m = v - c;
